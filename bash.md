@@ -6,7 +6,7 @@
 |--|--|
 |`Up`/`Down`|Previous/next command|
 |`Tab`|Auto-complete|
-|`Ctrl + C`<br>`Ctrl + \`|Kill process|
+|`Ctrl + C`  `Ctrl + \`|Kill process|
 |`Ctrl + D`|End the input; Exit|
 |`Ctrl + L`|Clear screen|
 |`Ctrl + S`/`Q`|Freeze/unfreeze terminal|
@@ -52,20 +52,20 @@
 |_fd_`<>`_file_|Opens a file for reading and writing and assigns the file descriptor to it|
 |_fd_`<&-`|Close input|
 |_fd_`>&-`|Close output|
-|_fd_`>`_file_<br>_fd_`>&`_fd_|Redirect output (overwrite), default stdout|
-|_fd_`>>`_file_<br>_fd_`>>&`_fd_|Redirect output (append), default stdout|
-|_fd_`<`_file_<br>_fd_`<&`_fd_|Redirect input, default stdin|
+|_fd_`>`_file_  _fd_`>&`_fd_|Redirect output (overwrite), default stdout|
+|_fd_`>>`_file_  _fd_`>>&`_fd_|Redirect output (append), default stdout|
+|_fd_`<`_file_  _fd_`<&`_fd_|Redirect input, default stdin|
 |`&>`_file_|Redirects both stdout and stderr|
-|_cmd_`|`_cmd_|Pipeline<br>Redirect output of the command to input of the other|
+|_cmd_`\|`_cmd_|Pipeline  Redirect output of the command to input of the other|
 
-&0, &1, &2 are reserved for stdin, stdout, stderr.
+&0, &1, &2 are reserved for stdin, stdout, stderr.  
 Child processes inherit open file descriptors.
 
 ### Special Device Files
 
 |Device|Description|
 |--|--|
-|`/dev/null`|Null device<br>Discards data written to and reports that the write succeeded|
+|`/dev/null`|Null device  Discards data written to and reports that the write succeeded|
 |`/dev/random`|Generates a pseudo-random number|
 |`/dev/stderr`|Default file descriptor where a process write error messages|
 |`/dev/stdin`|Default file descriptor where data is sent to and read by a process|
@@ -97,7 +97,7 @@ Child processes inherit open file descriptors.
 |--|--|
 |`#`|Comment|
 |`\`_char_|Escape character|
-|`'`_str_`'`<br>`"`_str_`"`|Preserves the literal value of each character|
+|`'`_str_`'`  `"`_str_`"`|Preserves the literal value of each character|
 |`;`|Separate commands|
 |`(`_commands_`)`|Group commands, commands will be executed in a subshell|
 |`{`_commands_`;}`|Group commands, commands will be executed in a current shell|
@@ -112,9 +112,9 @@ Child processes inherit open file descriptors.
 
 |Operator|Description|
 |--|--|
-|_var_`++`<br>_var_`--`|Post-increment/decrement|
-|`++`_var_<br>`--`_var_|Pre-increment/decrement|
-|`-`_expr_<br>`+`_expr_|Unary minus/plus|
+|_var_`++`  _var_`--`|Post-increment/decrement|
+|`++`_var_  `--`_var_|Pre-increment/decrement|
+|`-`_expr_  `+`_expr_|Unary minus/plus|
 |`+`|Addition|
 |`-`|Subtraction|
 |`*`|Multiplication|
@@ -162,8 +162,8 @@ Child processes inherit open file descriptors.
 
 |Variable|Description|
 |--|--|
-|`$IFS`|Internal field separator<br>Contains characters that split shell words, typically includes the space, tab, and the newline|
-|`$`_n_<br>`$(`_nn..._`)`|Positional Parameter<br>Assigned from the shell’s arguments when it is invoked, starting from one|
+|`$IFS`|Internal field separator  Contains characters that split shell words, typically includes the space, tab, and the newline|
+|`$`_n_  `$(`_nn..._`)`|Positional Parameter<br />Assigned from the shell’s arguments when it is invoked, starting from one|
 |`$*`|All positional parameters separated by first character of `$IFS`, `$1` `$2` `$3` ...|
 |`$@`|All positional parameters, `{$1, $2, $3 ...}`|
 |`$#`|Number of positional parameters|
@@ -268,7 +268,7 @@ done
 |`umask`|Change the default permissions given to newly created files|
 |`whereis`|Search the user's $path for binaries, man pages and source files|
 |`which`|Search the user's $path for a program file|
-|`zip`/`unzip`<br>`gzip`/`gunzip`<br>`bzip2`/`bunzip2`|Compress/decompress files|
+|`zip`/`unzip`  `gzip`/`gunzip`  `bzip2`/`bunzip2`|Compress/decompress files|
 
 ### Directories
 
@@ -299,7 +299,7 @@ done
 
 |Command|Description|
 |--|--|
-|`.`<br>`source`|Execute commands from a file|
+|`.`  `source`|Execute commands from a file|
 |`builtin`|Run a built-in command|
 |`command`|Run a command ignoring aliases and function names|
 |`exec`|Destroy current shell and run a command|
@@ -425,12 +425,3 @@ Placed after the word designator, multiple modifiers can be used a the same time
 |`:&`|Repeat the previous substitution|
 |`:g`/`:a`|Cause changes to be applied over the entire event line|
 |`:G`|Apply the following `s` modifier once to each word in the event|
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjA4NjQ3NywtODUwMTU0MTAyLDE3Nj
-E5ODcwOTIsMzAxMTI1ODY4LDEyMjMzNDA0NTQsMTk5NzIxNjQ1
-LC0yODgyOTMxNiwtMTQ0Mjc0OTkyMywxNzAyNjAzNDA1LC0yMD
-k2NDE5NTI0LDc2NzYyMDIyNywtMTcwNDk4ODY3NCwxNjYzNDI5
-MTI2LC0xNzg0MzA4OTQ3LC0xNTYzOTY2NjAzLC0xMjIzMDczMD
-gzLC0yMTI2NDI1NTU5LC0xMzM1OTMwNjM3LDUyNzg2NjEzOSw0
-NDQwODY5MTVdfQ==
--->
