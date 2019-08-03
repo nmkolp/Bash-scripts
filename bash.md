@@ -6,7 +6,7 @@
 |--|--|
 |`Up`/`Down`|Previous/next command|
 |`Tab`|Auto-complete|
-|`Ctrl + C`  `Ctrl + \`|Kill process|
+|`Ctrl + C`<br />`Ctrl + \`|Kill process|
 |`Ctrl + D`|End the input; Exit|
 |`Ctrl + L`|Clear screen|
 |`Ctrl + S`/`Q`|Freeze/unfreeze terminal|
@@ -52,11 +52,11 @@
 |_fd_`<>`_file_|Opens a file for reading and writing and assigns the file descriptor to it|
 |_fd_`<&-`|Close input|
 |_fd_`>&-`|Close output|
-|_fd_`>`_file_  _fd_`>&`_fd_|Redirect output (overwrite), default stdout|
-|_fd_`>>`_file_  _fd_`>>&`_fd_|Redirect output (append), default stdout|
-|_fd_`<`_file_  _fd_`<&`_fd_|Redirect input, default stdin|
+|_fd_`>`_file_<br />_fd_`>&`_fd_|Redirect output (overwrite), default stdout|
+|_fd_`>>`_file_<br />_fd_`>>&`_fd_|Redirect output (append), default stdout|
+|_fd_`<`_file_<br />_fd_`<&`_fd_|Redirect input, default stdin|
 |`&>`_file_|Redirects both stdout and stderr|
-|_cmd_`\|`_cmd_|Pipeline  Redirect output of the command to input of the other|
+|_cmd_`\|`_cmd_|Pipeline<br />Redirect output of the command to input of the other|
 
 &0, &1, &2 are reserved for stdin, stdout, stderr.  
 Child processes inherit open file descriptors.
@@ -65,7 +65,7 @@ Child processes inherit open file descriptors.
 
 |Device|Description|
 |--|--|
-|`/dev/null`|Null device  Discards data written to and reports that the write succeeded|
+|`/dev/null`|Null device<br />Discards data written to and reports that the write succeeded|
 |`/dev/random`|Generates a pseudo-random number|
 |`/dev/stderr`|Default file descriptor where a process write error messages|
 |`/dev/stdin`|Default file descriptor where data is sent to and read by a process|
@@ -97,11 +97,11 @@ Child processes inherit open file descriptors.
 |--|--|
 |`#`|Comment|
 |`\`_char_|Escape character|
-|`'`_str_`'`  `"`_str_`"`|Preserves the literal value of each character|
+|`'`_str_`'`<br />`"`_str_`"`|Preserves the literal value of each character|
 |`;`|Separate commands|
 |`(`_commands_`)`|Group commands, commands will be executed in a subshell|
 |`{`_commands_`;}`|Group commands, commands will be executed in a current shell|
-|`&&`/`||`|Run command if previous was successful/unsuccessful|
+|`&&`/`\|\|`|Run command if previous was successful/unsuccessful|
 |`$`_var_|Get the value of a variable|
 |`((`_expr_`))`|Evaluate an expression|
 |`$((`_expr_`))`|Evaluate an expression and substitute the expression with the result|
@@ -112,9 +112,9 @@ Child processes inherit open file descriptors.
 
 |Operator|Description|
 |--|--|
-|_var_`++`  _var_`--`|Post-increment/decrement|
-|`++`_var_  `--`_var_|Pre-increment/decrement|
-|`-`_expr_  `+`_expr_|Unary minus/plus|
+|_var_`++`<br />_var_`--`|Post-increment/decrement|
+|`++`_var_<br />`--`_var_|Pre-increment/decrement|
+|`-`_expr_<br />`+`_expr_|Unary minus/plus|
 |`+`|Addition|
 |`-`|Subtraction|
 |`*`|Multiplication|
@@ -126,10 +126,10 @@ Child processes inherit open file descriptors.
 |`<=`/`>=`|Less/greater than or equal to|
 |`!`|Logical negation|
 |`&&`|Logical AND|
-|`||`|Logical OR|
+|`\|\|`|Logical OR|
 |`~`|Bitwise negation|
 |`&`|Bitwise AND|
-|`|`|Bitwise OR|
+|`\|`|Bitwise OR|
 |`^`|Bitwise XOR|
 |`<<`/`>>`|Bitwise shift left/right|
 |_expr_`?`_expr_`:`_expr_|Conditional (ternary) operator|
@@ -156,14 +156,14 @@ Child processes inherit open file descriptors.
 |`\x`_HH_|The eight-bit character whose value is the hexadecimal value _HH_ (one or two hex digits)|
 |`\u`_HHHH_|The Unicode character whose value is the hexadecimal value _HHHH_ (one to four hex digits)|
 |`\U`_HHHHHHHH_|The Unicode character whose value is the hexadecimal value _HHHHHHHH_ (one to eight hex digits)|
-|`\c`_char_|A control-_char_  character|
+|`\c`_char_|A control-_char_ character|
 
 ### Special variables
 
 |Variable|Description|
 |--|--|
-|`$IFS`|Internal field separator  Contains characters that split shell words, typically includes the space, tab, and the newline|
-|`$`_n_  `$(`_nn..._`)`|Positional Parameter<br />Assigned from the shell’s arguments when it is invoked, starting from one|
+|`$IFS`|Internal field separator<br />Contains characters that split shell words, typically includes the space, tab, and the newline|
+|`$`_n_<br />`$(`_nn..._`)`|Positional Parameter<br />Assigned from the shell’s arguments when it is invoked, starting from one|
 |`$*`|All positional parameters separated by first character of `$IFS`, `$1` `$2` `$3` ...|
 |`$@`|All positional parameters, `{$1, $2, $3 ...}`|
 |`$#`|Number of positional parameters|
@@ -268,7 +268,7 @@ done
 |`umask`|Change the default permissions given to newly created files|
 |`whereis`|Search the user's $path for binaries, man pages and source files|
 |`which`|Search the user's $path for a program file|
-|`zip`/`unzip`  `gzip`/`gunzip`  `bzip2`/`bunzip2`|Compress/decompress files|
+|`zip`/`unzip`<br />`gzip`/`gunzip`<br />`bzip2`/`bunzip2`|Compress/decompress files|
 
 ### Directories
 
@@ -299,7 +299,7 @@ done
 
 |Command|Description|
 |--|--|
-|`.`  `source`|Execute commands from a file|
+|`.`<br />`source`|Execute commands from a file|
 |`builtin`|Run a built-in command|
 |`command`|Run a command ignoring aliases and function names|
 |`exec`|Destroy current shell and run a command|
