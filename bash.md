@@ -226,7 +226,7 @@ do
 done
 ```
 
-`break` Exits the loop.
+`break` Exits the loop.  
 `continue` Resume the next iteration of a loop.
 
 ```bash
@@ -236,7 +236,7 @@ done
 }
 ```
 
-`local` Create a local variable.
+`local` Create a local variable.  
 `return` Exit a function.
 
 ## Directories & Files
