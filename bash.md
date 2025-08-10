@@ -282,7 +282,7 @@ Programs that are not built into the shell, typically located in directories lik
 |`<<`/`>>`|Bitwise shift left/right|
 |_expr_ `?` _expr_ `:` _expr_|Conditional (ternary) operator|
 |_var_`=`_expr_|Assignment|
-|_var__op_`=`_expr_|Same as _var_`=`_var_ _op_ _expr_|
+|_var_`op=`_expr_|Same as _var_`=`_var_ _op_ _expr_, wher _op_ is any binary operator|
 
 ### Redirections
 
@@ -378,7 +378,7 @@ done
 # select construct - used for generation of text menus
 
 # 1. Outputs the specified words, each preceded by a number of the position in the list
-# 2. Outputs PS3 prompt string
+# 2. Outputs PS3 prompt text
 # 3. Reads a line from the standard input
 # 4.1. If the input consists of a number corresponding to one of the words, then sets the value of the variable to that word
 # 4.2. If the input is empty, displays the words and prompt again
@@ -386,7 +386,7 @@ done
 # The line read is saved in the variable REPLY
 # 5. The commands are executed after each selection until a break command is executed
 
-[PS3=prompt string]
+[PS3=prompt text]
 select variable in [in words ...];
 do
     commands;
