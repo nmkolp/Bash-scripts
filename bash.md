@@ -86,10 +86,10 @@ Programs that are not built into the shell, typically located in directories lik
 |`cp`|Copy a file/directory|
 |`diff`|Compare two files by line|
 |`du`|Summarize disk usage of the set of files|
-|`file`|Determine file type|
+|`file`|Determine file type by examining its content|
 |`find`|Search for files|
 |`ln`|Create a link to a file|
-|`locate`|Search database of filenames|
+|`locate`|Fast search for files by searching a pre-built database, the database is updated by updatedb command|
 |`ls`|List information about the files|
 |`mkdir`|Create a directory|
 |`more`/`less`|Display output one page at a time (less is more functional)|
@@ -106,8 +106,8 @@ Programs that are not built into the shell, typically located in directories lik
 
 |Command|Description|
 |--|--|
-|`apropos`|Find in documentation
-|`man`|Help manual
+|`apropos`|Find in documentation|
+|`man`|Help manual|
 |`info`|Find in documentation|
 |`whatis`|Find one-line description in documentation|
 
